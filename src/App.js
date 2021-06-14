@@ -6,7 +6,7 @@ require('dotenv').config();
 
 function App() {
   return (
-    <div className="pt-32 bg-gray-100 h-screen">
+    <div className="pt-32 bg-gray-200 h-screen">
       <div className="container mx-auto">
         <Card 
           day="Monday"
