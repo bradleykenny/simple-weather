@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from "./components/Card";
+import Carousel from './components/Carousel';
+
+require('dotenv').config();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="pt-32 bg-gray-100 h-screen">
+      <div className="container mx-auto">
+        <Card 
+          day="Monday"
+          description="Sky is clear"
+          avgTemp="23"
+          minTemp="18"
+          maxTemp="27"
+          icon="11d"
+        />
+        <Carousel />
+      </div>
     </div>
   );
 }
