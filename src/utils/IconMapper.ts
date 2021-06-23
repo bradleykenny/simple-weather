@@ -1,4 +1,7 @@
-const mapIcon = (icon: string): string => {
+import twemoji from 'twemoji';
+import htmlParse, { domToReact } from 'html-react-parser';
+
+const mapIcon = (icon: string): ReturnType<typeof domToReact> => {
     let newIconName: string = "";
     
     switch (icon) {
@@ -15,7 +18,9 @@ const mapIcon = (icon: string): string => {
             break;
     }
 
-    return newIconName;
+    const twemojiOptions = { folder: 'svg', ext: '.svg' };
+    let twemojiSvg: string = twemoji.parse(newIconName, twemojiOptions);
+    return htmlParse(twemojiSvg);
 }
 
 export default mapIcon;
