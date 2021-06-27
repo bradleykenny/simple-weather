@@ -10,8 +10,6 @@ type CardProps = {
 const Card = (props: CardProps) => {
 
     const { weather } = props;
-
-    // const iconUrl: string = `http://openweathermap.org/img/wn/${ weather.weather[0].icon}@4x.png`;
     
     return (
         <div className="weatherCard px-8 pt-8 pb-8 bg-white shadow-md rounded-md">
