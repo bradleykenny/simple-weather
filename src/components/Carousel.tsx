@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { FunctionComponent, useState, useEffect } from 'react';
 import { WeatherData } from '../types/WeatherData';
 import Card from './Card';
 
 type CarouselProps = {};
 
-const Carousel = (props: CarouselProps) => {
+const Carousel: FunctionComponent<CarouselProps> = (props: CarouselProps) => {
     const [ weather, setWeather ] = useState<WeatherData>();
 
     useEffect(() => {

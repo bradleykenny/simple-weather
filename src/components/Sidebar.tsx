@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { FunctionComponent, useState, useEffect } from "react";
 
 type SidebarProps = {}
 
-export const Sidebar = (props: SidebarProps) => {
+const Sidebar: FunctionComponent<SidebarProps> = (props: SidebarProps) => {
 
     return (
         <>
         </>
     )
 }
+
+export default Sidebar;
