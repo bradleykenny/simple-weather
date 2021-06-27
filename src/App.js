@@ -16,11 +16,8 @@ function App() {
   }
 
   return (
-    <div className="pt-32 bg-gray-200 h-screen">
+    <div className="pt-32 bg-gray-200 min-h-screen">
       <div className="container mx-auto">
-        <Card 
-          weather={weather}
-        />
         <Carousel />
       </div>
     </div>
