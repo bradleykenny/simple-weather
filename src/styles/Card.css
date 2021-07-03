@@ -1,3 +1,11 @@
+.cardWidth {
+	width: 27rem;
+}
+
 .weatherCard {
-    width: 27rem;
+	width: 27rem;
+}
+
+.extendedCardInfo {
+	margin-top: -15px;
 }
