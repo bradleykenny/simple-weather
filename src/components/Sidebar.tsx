@@ -1,13 +1,9 @@
 import { FunctionComponent, useState, useEffect } from "react";
 
-type SidebarProps = {}
+type SidebarProps = {};
 
 const Sidebar: FunctionComponent<SidebarProps> = (props: SidebarProps) => {
-
-    return (
-        <>
-        </>
-    )
-}
+	return <></>;
+};
 
 export default Sidebar;
