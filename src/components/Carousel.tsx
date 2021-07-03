@@ -1,4 +1,5 @@
 import { FunctionComponent, useState, useEffect } from "react";
+import { fetchWeather } from "../services/weatherServices";
 import { WeatherData } from "../types/WeatherData";
 import Card from "./Card";
 
@@ -8,14 +9,9 @@ const Carousel: FunctionComponent<CarouselProps> = (props: CarouselProps) => {
 	const [weather, setWeather] = useState<WeatherData>();
 
 	useEffect(() => {
-		const apiUrl: string = `https://api.openweathermap.org/data/2.5/onecall?lat=-33.839490&lon=151.209080&units=metric&appid=${process.env.REACT_APP_API}`;
-		const weatherDataFetch: Promise<WeatherData> = fetch(apiUrl)
-			.then((res) => res.json())
-			.then((res) => res);
-
+		const weatherDataFetch = fetchWeather();
 		weatherDataFetch.then((wd) => {
 			setWeather(wd);
-			console.log(wd);
 		});
 	}, []);
 
