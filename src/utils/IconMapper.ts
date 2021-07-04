@@ -21,6 +21,26 @@ const mapIcon = (icon: string): ReturnType<typeof domToReact> => {
 		case "04n":
 			newIconName = "☁️";
 			break;
+		case "09d":
+		case "09n":
+			newIconName = "🌦";
+			break;
+		case "10d":
+		case "10n":
+			newIconName = "🌧";
+			break;
+		case "11d":
+		case "11n":
+			newIconName = "⛈";
+			break;
+		case "13d":
+		case "13n":
+			newIconName = "❄️";
+			break;
+		case "50d":
+		case "50n":
+			newIconName = "🌫";
+			break;
 		default:
 			console.log(`Do not have mapping for icon ${icon}`);
 			break;
