@@ -1,9 +1,14 @@
 import { FunctionComponent, useState, useEffect } from "react";
+import Carousel from "./Carousel";
 
 type SidebarProps = {};
 
 const Sidebar: FunctionComponent<SidebarProps> = (props: SidebarProps) => {
-	return <></>;
+	return (
+		<div className="w-96 h-screen overflow-auto">
+			<Carousel />
+		</div>
+	);
 };
 
 export default Sidebar;

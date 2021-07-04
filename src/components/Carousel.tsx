@@ -16,8 +16,8 @@ const Carousel: FunctionComponent<CarouselProps> = (props: CarouselProps) => {
 	}, []);
 
 	return (
-		<div className="p-4 w-96">
-			{weather && <Card weather={weather.daily[0]} />}
+		<div className="p-4 pr-0">
+			{weather && weather.daily.map((daily) => <Card weather={daily} />)}
 		</div>
 	);
 };

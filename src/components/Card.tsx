@@ -20,8 +20,8 @@ const Card: FunctionComponent<CardProps> = (props: CardProps) => {
 
 	return (
 		<>
-			<div className="p-4 bg-white shadow-md rounded-md z-50 relative">
-				<div className="mr-6 w-16 mb-1 inline-block">
+			<div className="p-4 mb-4 bg-white shadow-md rounded-md z-50 relative">
+				<div className="mr-4 w-16 mb-1 inline-block">
 					{mapIcon(weather?.weather[0].icon)}
 				</div>
 				<div className="inline-block">
