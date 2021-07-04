@@ -1,7 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import { DailyWeather } from "../types/DailyWeather";
 import mapIcon from "../utils/IconMapper";
-import ExpandedCardInfo from "./ExpandedCardInfo";
 
 import "../styles/Card.css";
 import getDayString from "../utils/DateMapper";

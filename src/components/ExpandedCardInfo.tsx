@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent } from "react";
 import { DailyWeather } from "../types/DailyWeather";
 
 import "../styles/Card.css";
