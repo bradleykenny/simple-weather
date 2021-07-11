@@ -1,4 +1,4 @@
-import { Dispatch, FunctionComponent, useState } from "react";
+import { Dispatch, FunctionComponent, SetStateAction } from "react";
 import { DailyWeather } from "../types/DailyWeather";
 import mapIcon from "../utils/IconMapper";
 
@@ -7,7 +7,7 @@ import getDayString from "../utils/DateMapper";
 
 type CardProps = {
 	weather: DailyWeather;
-	setActiveCard: Dispatch<React.SetStateAction<DailyWeather>>;
+	setActiveCard: Dispatch<SetStateAction<DailyWeather>>;
 };
 
 const Card: FunctionComponent<CardProps> = (props: CardProps) => {

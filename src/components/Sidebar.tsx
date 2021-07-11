@@ -1,11 +1,17 @@
-import { FunctionComponent, useState, useEffect, Dispatch } from "react";
+import {
+	FunctionComponent,
+	useState,
+	useEffect,
+	Dispatch,
+	SetStateAction,
+} from "react";
 import { fetchWeather } from "../services/weatherServices";
 import { DailyWeather } from "../types/DailyWeather";
 import { WeatherData } from "../types/WeatherData";
 import Carousel from "./Carousel";
 
 type SidebarProps = {
-	setActiveCard: Dispatch<React.SetStateAction<DailyWeather>>;
+	setActiveCard: Dispatch<SetStateAction<DailyWeather>>;
 };
 
 const Sidebar: FunctionComponent<SidebarProps> = (props: SidebarProps) => {

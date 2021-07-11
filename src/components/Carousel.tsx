@@ -1,12 +1,11 @@
-import { FunctionComponent, useState, useEffect, Dispatch } from "react";
-import { fetchWeather } from "../services/weatherServices";
+import { FunctionComponent, Dispatch, SetStateAction } from "react";
 import { DailyWeather } from "../types/DailyWeather";
 import { WeatherData } from "../types/WeatherData";
 import Card from "./Card";
 
 type CarouselProps = {
 	weather: WeatherData | undefined;
-	setActiveCard: Dispatch<React.SetStateAction<DailyWeather>>;
+	setActiveCard: Dispatch<SetStateAction<DailyWeather>>;
 };
 
 const Carousel: FunctionComponent<CarouselProps> = (props: CarouselProps) => {
