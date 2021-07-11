@@ -20,7 +20,7 @@ const Card: FunctionComponent<CardProps> = (props: CardProps) => {
 	return (
 		<>
 			<div
-				className="p-4 mb-4 bg-white shadow-md rounded-md z-50 relative"
+				className="p-4 mb-4 bg-white shadow-md rounded-md z-50 relative cursor-pointer"
 				onClick={() => props.setActiveCard(weather)}
 			>
 				<div className="mr-4 w-16 mb-1 inline-block">

@@ -34,7 +34,7 @@ const FocusCard: FunctionComponent<FocusCardProps> = (
 							{Math.floor(weather.temp.day)}
 						</h2>
 						<h2 className="text-gray-500 italic capitalize text-sm">
-							Some description
+							{weather.weather[0].description}
 						</h2>
 					</div>
 				</>
