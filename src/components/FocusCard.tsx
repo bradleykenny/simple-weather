@@ -35,7 +35,7 @@ const FocusCard: FunctionComponent<FocusCardProps> = (
 	}
 
 	return (
-		<div className="p-12 m-4 w-4/6 bg-white shadow-md rounded-md z-50 relative">
+		<div className="p-12 m-4 w-full bg-white shadow-md rounded-md z-50 relative">
 			{weather && (
 				<>
 					<h3 className="text-4xl font-bold">{formattedDate}</h3>
