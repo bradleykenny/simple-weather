@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { Dispatch, FunctionComponent, useState } from "react";
 import { DailyWeather } from "../types/DailyWeather";
 import mapIcon from "../utils/IconMapper";
 
@@ -7,11 +7,11 @@ import getDayString from "../utils/DateMapper";
 
 type CardProps = {
 	weather: DailyWeather;
+	setActiveCard: Dispatch<React.SetStateAction<DailyWeather>>;
 };
 
 const Card: FunctionComponent<CardProps> = (props: CardProps) => {
 	const { weather } = props;
-	const [expand, setExpand] = useState(true);
 
 	const date = new Date(weather.dt * 1000); // so in seconds, no milliseconds
 	const today = getDayString(date.getDay());
@@ -19,7 +19,10 @@ const Card: FunctionComponent<CardProps> = (props: CardProps) => {
 
 	return (
 		<>
-			<div className="p-4 mb-4 bg-white shadow-md rounded-md z-50 relative">
+			<div
+				className="p-4 mb-4 bg-white shadow-md rounded-md z-50 relative"
+				onClick={() => props.setActiveCard(weather)}
+			>
 				<div className="mr-4 w-16 mb-1 inline-block">
 					{mapIcon(weather?.weather[0].icon)}
 				</div>

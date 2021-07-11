@@ -1,12 +1,26 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState, useEffect, Dispatch } from "react";
+import { fetchWeather } from "../services/weatherServices";
+import { DailyWeather } from "../types/DailyWeather";
+import { WeatherData } from "../types/WeatherData";
 import Carousel from "./Carousel";
 
-type SidebarProps = {};
+type SidebarProps = {
+	setActiveCard: Dispatch<React.SetStateAction<DailyWeather>>;
+};
 
 const Sidebar: FunctionComponent<SidebarProps> = (props: SidebarProps) => {
+	const [weather, setWeather] = useState<WeatherData>();
+
+	useEffect(() => {
+		const weatherDataFetch = fetchWeather();
+		weatherDataFetch.then((wd) => {
+			setWeather(wd);
+		});
+	}, []);
+
 	return (
 		<div className="w-96 h-screen overflow-auto">
-			<Carousel />
+			<Carousel weather={weather} setActiveCard={props.setActiveCard} />
 		</div>
 	);
 };
